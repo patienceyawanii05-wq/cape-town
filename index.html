@@ -1,0 +1,156 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Africa's Natural Resources</title>
+    <style>
+        /* Base Styles & Mobile-First View (No Media Query) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        figure {
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        figcaption {
+            margin-top: 10px;
+        }
+
+        /* Tablet View (Triggers at 772px) */
+        @media screen and (min-width: 772px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            figure {
+                border-radius: 50%;
+                aspect-ratio: 1 / 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 30px;
+                overflow: hidden;
+            }
+
+            figure img {
+                width: 50%;
+            }
+
+            .grid-container figure:last-child {
+                grid-column: span 2;
+                border-radius: 20px;
+                aspect-ratio: auto;
+            }
+        }
+
+        /* Large Screen View (Triggers at 992px) */
+        @media screen and (min-width: 992px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            figure {
+                border-radius: 0;
+                aspect-ratio: auto;
+                display: block;
+                padding: 15px;
+            }
+
+            figure img {
+                width: 100%;
+            }
+
+            .grid-container figure:last-child {
+                grid-column: span 1;
+            }
+
+            .grid-container figure:nth-child(3n) {
+                grid-column: span 2;
+            }
+        }
+
+        /* Prefers Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Dark Color Scheme & Contrast Accessibility */
+        @media (prefers-color-scheme: dark) {
+            figure {
+                background-color: #1a1a1a;
+                color: #ffe066;
+                border-color: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>South Africa's Natural Resources</h1>
+        <div class="grid-container">
+            <figure>
+                <img src="table-mountain.jpg" alt="Table Mountain landscape under a clear blue sky in Cape Town">
+                <figcaption>
+                    <h2>Table Mountain Floral Kingdom</h2>
+                    <p>Table Mountain is part of the Cape Floral Region, a UNESCO World Heritage site boasting an exceptionally rich diversity of indigenous plant species found nowhere else on Earth.</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="gold-mine.jpg" alt="Open pit mining landscape representing South Africa's rich mineral wealth">
+                <figcaption>
+                    <h2>Mineral Wealth</h2>
+                    <p>South Africa is globally renowned for its vast mineral reserves, particularly gold, platinum, and diamonds, which have historically driven the nation's industrial development.</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="kruger-wildlife.jpg" alt="Wildlife roaming freely across the expansive savannah of Kruger National Park">
+                <figcaption>
+                    <h2>Biodiversity & Wildlife</h2>
+                    <p>Protected reserves like Kruger National Park safeguard sprawling ecosystems and iconic wildlife, serving as a cornerstone for conservation and natural heritage.</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="coastal-ocean.jpg" alt="Dynamic coastline where the Atlantic and Indian oceans meet around the Cape Peninsula">
+                <figcaption>
+                    <h2>Marine Resources</h2>
+                    <p>The convergence of two major ocean currents along South Africa's extensive coastline creates rich marine habitats supporting diverse fisheries and coastal ecosystems.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </main>
+</body>
+</html>
